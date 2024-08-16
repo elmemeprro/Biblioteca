@@ -177,9 +177,9 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item active">Libros</li>
+                                <li class="breadcrumb-item active">Clientes</li>
                             </ol>
-                            <form action="editar.php" method="post">
+                            <form action="registro_prestamos.php" method="post">
                             <button type="submit"  class="btn btn-block btn-primary btn-lg col-sm-3"> <i class="fas fa-sync-alt"></i> </button>
                             </form>
                             
@@ -192,51 +192,33 @@
             <section class="content">
             
                 <!-- Default box -->
-                <?php
-include "conexion.php";
-$id = $_GET['id'];
-$sql = $conn->query("SELECT * FROM libros WHERE id = '$id'");
-while($dat = $sql->fetch_object()){
-
-?>
                 <center><div class="card col-sm-7">
                 <div class="mb-3">
-                    
-                <form action="editar_librosss.php?id=<?php echo $dat -> id; ?>" method="post">
+                <form action="registro_prestamoss.php" method="post">
+            <label  class="form-label">NOMBRE DEL CLIENTE</label>
+            <input type="text" class="form-control" name="nombre" placeholder="ingrese el nombre del cliente">
+          </div>
 
+          <div class="mb-3">
+            <label  class="form-label">TITULO DEL LIBRO</label>
+            <input type="text" class="form-control" name="titulo" placeholder="ingrese el titulo del libro">
+          </div>
 
-            <label  class="form-label">CODIGO DEL LIBRO</label>
-            <input type="text" class="form-control" name="id" value="<?php echo $dat -> id; ?>" disabled>
-          
+          <div class="mb-3">
+            <label  class="form-label">FECHA DE PRESTAMO</label>
+            <input type="date" class="form-control" name="fechap" placeholder="ingrese la fecha del prestamo">
+          </div>
 
-            <label  class="form-label">TITULO</label>
-            <input type="text" class="form-control" name="titulo" value="<?php echo $dat -> titulo; ?>" placeholder="ingrese el titulo del libro">
-          
-          
-            <label  class="form-label">AUTOR</label>
-            <input type="text" class="form-control" name="autor" value="<?php echo $dat -> autor; ?>"placeholder="ingrese el autor del libro">
-          
-          
-            <label  class="form-label">EDITOR</label>
-            <input type="text" class="form-control" name="editor" value="<?php echo $dat -> editor; ?>"placeholder="ingrese el editor del libro">
-         
+          <div class="mb-3">
+            <label  class="form-label">FECHA DE DEVOLUCION</label>
+            <input type="date" class="form-control" name="fechad" placeholder="ingrese la fecha de la devolucion">
+          </div>
 
-            <label  class="form-label">AÑO DE LANZAMIENTO</label>
-            <input type="text" class="form-control" name="año" value="<?php echo $dat -> año; ?>" placeholder="ingrese el año de lanzamiento del libro">
-          
-
-
-          <button type="submit" class="btn btn-outline-info">Editar</button>
-          <button type="button" class="btn btn-outline-danger"><a href="interfaz.php">Listar</a></button>
-          
+          <button type="submit" class="btn btn-outline-info">Subir</button>
+          <button type="button" class="btn btn-outline-danger"><a href="interfaz_libros.php">Listar</a></button>
  </center>
                 
- <?php
-          }
-          ?>
-          </form>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-   
+ 
                     <!-- /.card-footer-->
                 </div>
                 <!-- /.card -->

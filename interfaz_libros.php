@@ -115,6 +115,13 @@
                                 </li>
 
                                 <li class="nav-item">
+                                    <a href="interfaz_prestamos.php" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tabla de Prestamos</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
                                     <a href="registro_cliente.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Registrar un Cliente</p>
@@ -125,6 +132,13 @@
                                     <a href="registro_libro.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Registrar un Libro</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="registro_prestamos.php" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Registrar un Prestamo</p>
                                     </a>
                                 </li>
 
@@ -163,7 +177,7 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item active">Estudiantes</li>
+                                <li class="breadcrumb-item active">Libros</li>
                                 
                             </ol>
                             <form action="interfaz.php" method="post">
@@ -180,7 +194,7 @@
             
                 <!-- Default box -->
                 <div class="card col-sm-25">
-                    <center><button type="button" class="btn btn-outline-danger card col-sm-.5"><a href="registro_cliente.php">Registro</a></button>
+                    <center><button type="button" class="btn btn-outline-danger card col-sm-.5"><a href="registro_libro.php">Registro</a></button>
  </center>
             <center><table class="table table-striped">
  <thead>
@@ -211,7 +225,7 @@ while($dat = $sql ->fetch_object()){
 
      <a href="editar_libros.php?id=<?php echo $dat -> id; ?>" class="btn btn-small btn-warning"><i class="fas fa-edit"></i></a>
 
-     <a href="eliminar_clientes.php?id=<?php echo $dat -> id; ?>" class="btn btn-small btn-danger"><i class="fas fa-trash-alt"></i></a>
+     <a href="eliminar_libros.php?id=<?php echo $dat -> id; ?>" class="btn btn-small btn-danger"><i class="fas fa-trash-alt"></i></a>
 
    </td>
    </tr>

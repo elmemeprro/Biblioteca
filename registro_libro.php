@@ -115,6 +115,13 @@
                                 </li>
 
                                 <li class="nav-item">
+                                    <a href="interfaz_prestamos.php" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tabla de Prestamos</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
                                     <a href="registro_cliente.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Registrar un Cliente</p>
@@ -125,6 +132,13 @@
                                     <a href="registro_libro.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Registrar un Libro</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="registro_prestamos.php" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Registrar un Prestamo</p>
                                     </a>
                                 </li>
 
@@ -141,7 +155,6 @@
                                     </a>
                                 </li>
                                 
-
                             </ul>
                         </li>
                     </ul>
@@ -165,7 +178,7 @@
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item active">Clientes</li>
                             </ol>
-                            <form action="registro.php" method="post">
+                            <form action="registro_libro.php" method="post">
                             <button type="submit"  class="btn btn-block btn-primary btn-lg col-sm-3"> <i class="fas fa-sync-alt"></i> </button>
                             </form>
                             
@@ -197,7 +210,7 @@
 
           <div class="mb-3">
             <label  class="form-label">AÑO DE LANZAMIENTO</label>
-            <input type="number" class="form-control" name="año" placeholder="ingrese el año de lanzamiento del libro">
+            <input type="text" class="form-control" name="año" placeholder="ingrese el año de lanzamiento del libro">
           </div>
 
           <button type="submit" class="btn btn-outline-info">Subir</button>
