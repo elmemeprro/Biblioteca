@@ -23,11 +23,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini">
-<?php
-    if(isset($_GET['error'])) {
-        echo "<p style='color: white'>Error: ".$_GET['error']."</p>";
-    }
-    ?>
+
     <?php
         session_start();
         
@@ -144,17 +140,18 @@
                                         <p>Cerrar Sesion</p>
                                     </a>
                                 </li>
+                                
 
                             </ul>
                         </li>
                     </ul>
                 </nav>
-
+                
                 <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
         </aside>
-
+        
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
@@ -167,99 +164,65 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item active">Estudiantes</li>
-
+                                
                             </ol>
                             <form action="interfaz.php" method="post">
-                                <button type="submit" class="btn btn-block btn-primary btn-lg col-sm-3"> <i
-                                        class="fas fa-sync-alt"></i> </button>
+                            <button type="submit"  class="btn btn-block btn-primary btn-lg col-sm-3"> <i class="fas fa-sync-alt"></i> </button>
                             </form>
-
+                            
                         </div>
                     </div>
                 </div><!-- /.container-fluid -->
             </section>
-
+            
             <!-- Main content -->
             <section class="content">
-
+            
                 <!-- Default box -->
                 <div class="card col-sm-25">
-                    <center><button type="button" class="btn btn-outline-danger card col-sm-.5"><a
-                                href="registro.php">Registro</a></button>
-                    </center>
-                    <center>
+                    <center><button type="button" class="btn btn-outline-danger card col-sm-.5"><a href="registro_cliente.php">Registro</a></button>
+ </center>
+            <center><table class="table table-striped">
+ <thead>
+    <center><tr>
+     <th scope="col">Codigo del Libro</th>
+     <th scope="col">Titulo</th>
+     <th scope="col">Autor</th>
+     <th scope="col">Editor</th>
+     <th scope="col">Año de lanzamiento</th>
+   </tr></center>
+   
+ </thead>
+ <tbody>
 
 
-                   
-                    
-                    <?php
+ <?php
 include "conexion.php";
-$id = $_SESSION['id'];
-$sql = $conn->query("SELECT * FROM registrar WHERE id = $id ");
-while($dat = $sql->fetch_object()){
+$sql = $conn ->query("SELECT * FROM libros");
+while($dat = $sql ->fetch_object()){
+
+?>    <tr>
+     <th scope="row"><?php echo $dat->id; ?> </th>
+     <td><?php echo $dat->titulo; ?></td>
+     <td><?php echo $dat->autor; ?></td>
+     <td><?php echo $dat->editor; ?></td>
+     <td><?php echo $dat->año; ?></td>
+     <td>
+
+     <a href="editar_libros.php?id=<?php echo $dat -> id; ?>" class="btn btn-small btn-warning"><i class="fas fa-edit"></i></a>
+
+     <a href="eliminar_clientes.php?id=<?php echo $dat -> id; ?>" class="btn btn-small btn-danger"><i class="fas fa-trash-alt"></i></a>
+
+   </td>
+   </tr>
+<?php
+}
 ?>
-<form action="cambiar.php?id=<?php echo $dat -> id; ?>" method="post">
-                            </thead>
-                            <div class="card-body">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th class="col-sm-1">#</th>
-                                            <th class="col-sm-3">Datos anteriores</th>
-                                            <th class="col-sm-3">Datos nuevos</th>
-                                          
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1.</td>
-                                            <td>ID</td>
-                                            <td>
-                                                
-                                            <input type="text" class="form-control col-sm-5" name="id" value="<?php echo $dat -> id; ?> "disabled>
-                                            </td>
-                                            
-                                        </tr>
-                                        <tr>
-                                            <td>2.</td>
-                                            <td>Nombre de usuario</td>
-                                            <td>
-                                            <input type="text" class="form-control col-sm-5" name="usuario" value="<?php echo $dat -> usuario; ?>">                                  
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>3.</td>
-                                            <td>Contraseña nueva</td>
-                                            <td>
-                                            <input type="password" class="form-control col-sm-5" name="contra_n" placeholder="ingrese la contraseña nueva">
-                                            
-                                            </td>
-                                            
-                                        </tr>
-                                        <tr>
-                                            <td>4.</td>
-                                            <td>Contraseña nueva</td>
-                                            <td>
-                                            <input type="password" class="form-control col-sm-5" name="contra_nn" placeholder="ingrese la contraseña nueva otra vez">
-                                            
-                                            </td>
-                                          
-                                        </tr>
-                                        <center><button type="submit" class="btn btn-outline-info">Aceptar</button>
-                                        </center>
-                                                                            </tbody>
-                                </table>
-                            </div>
-                            <?php
-          }
-          ?>
-          </form>
-                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-                            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                            crossorigin="anonymous"></script>
-                    </center>
-
+ </tbody>
+</table>    
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ </center>    
+ 
                     <!-- /.card-footer-->
                 </div>
                 <!-- /.card -->
@@ -268,13 +231,12 @@ while($dat = $sql->fetch_object()){
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-
+        
         <footer class="main-footer">
             <div class="float-right d-none d-sm-block">
                 <b>Version</b> 1.0.0
             </div>
-            <strong>6to Computacion &copy; 2024 <a href="https://adminlte.io">Emanuel y Daniel</a>.</strong> Mamitas
-            Pluebla.
+            <strong>6to Computacion &copy; 2024 <a href="https://adminlte.io">Emanuel y Daniel</a>.</strong> Mamitas Pluebla.
         </footer>
 
         <!-- Control Sidebar -->
@@ -289,7 +251,7 @@ while($dat = $sql->fetch_object()){
 
     <!-- AdminLTE App -->
 
-
+    
 
     <script src="plugins/jquery/jquery.min.js"></script>
 

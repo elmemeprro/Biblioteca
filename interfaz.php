@@ -106,18 +106,28 @@
                                         <p>Tabla de Clientes</p>
                                     </a>
                                 </li>
+
                                 <li class="nav-item">
-                                    <a href="registro.php" class="nav-link">
+                                    <a href="interfaz_libros.php" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tabla de Libros</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="registro_cliente.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Registrar un Cliente</p>
                                     </a>
                                 </li>
+
                                 <li class="nav-item">
-                                    <a href="notas.php" class="nav-link">
+                                    <a href="registro_libro.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Registrar Libros</p>
+                                        <p>Registrar un Libro</p>
                                     </a>
                                 </li>
+
                                 <li class="nav-item">
                                     <a href="cambiar_contra.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>

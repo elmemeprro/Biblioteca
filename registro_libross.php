@@ -8,5 +8,5 @@ $año = $_POST['año'];
     $sql = $conn -> query("INSERT INTO libros(titulo,autor,editor,año) VALUES('$titulo','$autor','$editor','$año'
 )");
 
-header('Location:interfaz.php');
+header('Location:interfaz_libros.php');
 ?>

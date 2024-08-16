@@ -100,24 +100,34 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
+                            <li class="nav-item">
                                     <a href="interfaz.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Tabla de Clientes</p>
                                     </a>
                                 </li>
+
                                 <li class="nav-item">
-                                    <a href="registro.php" class="nav-link">
+                                    <a href="interfaz_libros.php" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tabla de Libros</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="registro_cliente.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Registrar un Cliente</p>
                                     </a>
                                 </li>
+
                                 <li class="nav-item">
-                                    <a href="notas.php" class="nav-link">
+                                    <a href="registro_libro.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Registrar Libros</p>
+                                        <p>Registrar un Libro</p>
                                     </a>
                                 </li>
+
                                 <li class="nav-item">
                                     <a href="cambiar_contra.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
@@ -170,33 +180,28 @@
                 <!-- Default box -->
                 <center><div class="card col-sm-7">
                 <div class="mb-3">
-                <form action="registrar_clientess.php" method="post">
-            <label  class="form-label">NOMBRE</label>
-            <input type="text" class="form-control" name="nombre" placeholder="ingrese el nombre del cliente">
+                <form action="registro_libross.php" method="post">
+            <label  class="form-label">TITULO</label>
+            <input type="text" class="form-control" name="titulo" placeholder="ingrese el titulo del libro">
           </div>
 
           <div class="mb-3">
-            <label  class="form-label">APELLIDO</label>
-            <input type="text" class="form-control" name="apellido" placeholder="ingrese el apellido del cliente">
+            <label  class="form-label">AUTOR</label>
+            <input type="text" class="form-control" name="autor" placeholder="ingrese el autor del libro">
           </div>
 
           <div class="mb-3">
-            <label  class="form-label">DPI</label>
-            <input type="number" class="form-control" name="dpi" placeholder="ingrese su DPI">
+            <label  class="form-label">EDITOR</label>
+            <input type="text" class="form-control" name="editor" placeholder="ingrese el editor del libro">
           </div>
 
           <div class="mb-3">
-            <label  class="form-label">NUMERO DE TELEFONO</label>
-            <input type="number" class="form-control" name="telefono" placeholder="ingrese su numero de telefono">
-          </div>
-
-          <div class="mb-3">
-            <label  class="form-label">CORREO</label>
-            <input type="text" class="form-control" name="correo" placeholder="ingrese su correo">
+            <label  class="form-label">AÑO DE LANZAMIENTO</label>
+            <input type="number" class="form-control" name="año" placeholder="ingrese el año de lanzamiento del libro">
           </div>
 
           <button type="submit" class="btn btn-outline-info">Subir</button>
-          <button type="button" class="btn btn-outline-danger"><a href="interfaz.php">Listar</a></button>
+          <button type="button" class="btn btn-outline-danger"><a href="interfaz_libros.php">Listar</a></button>
  </center>
                 
  
