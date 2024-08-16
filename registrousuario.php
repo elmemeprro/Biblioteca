@@ -290,6 +290,19 @@
                         <input type="text" name="apellido" required><i>Apellido</i>
                     </div>
                     <br>
+
+                    <div class="inputBox">
+                        <input type="text" name="dpi" required><i>DPI</i>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <input type="number" name="telefono" required><i>Telefono</i>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="correo" required><i>Correo</i>
+                    </div>
+                    <br>
                     <div class="inputBox">
                         <input type="text" name="usuario" required><i>Usuario</i>
                     </div>

@@ -180,7 +180,7 @@
                                 <li class="breadcrumb-item active">Libros</li>
                                 
                             </ol>
-                            <form action="interfaz.php" method="post">
+                            <form action="interfaz_libros.php" method="post">
                             <button type="submit"  class="btn btn-block btn-primary btn-lg col-sm-3"> <i class="fas fa-sync-alt"></i> </button>
                             </form>
                             

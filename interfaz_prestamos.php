@@ -180,7 +180,7 @@
                                 <li class="breadcrumb-item active">Prestamos</li>
                                 
                             </ol>
-                            <form action="interfaz.php" method="post">
+                            <form action="interfaz_prestamos.php" method="post">
                             <button type="submit"  class="btn btn-block btn-primary btn-lg col-sm-3"> <i class="fas fa-sync-alt"></i> </button>
                             </form>
                             
@@ -217,10 +217,10 @@ while($dat = $sql ->fetch_object()){
 
 ?>    <tr>
      <th scope="row"><?php echo $dat->id; ?> </th>
-     <td><?php echo $dat->fk_cliente; ?></td>
-     <td><?php echo $dat->fk_titulo; ?></td>
-     <td><?php echo $dat->fecha_de_pres; ?></td>
-     <td><?php echo $dat->fecha_de_dev; ?></td>
+     <td><?php echo $dat->cliente; ?></td>
+     <td><?php echo $dat->titulo; ?></td>
+     <td><?php echo $dat->pres; ?></td>
+     <td><?php echo $dat->dev; ?></td>
      <td>
 
    </td>

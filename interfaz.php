@@ -176,7 +176,7 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item active">Estudiantes</li>
+                                <li class="breadcrumb-item active">Clientes</li>
                                 
                             </ol>
                             <form action="interfaz.php" method="post">

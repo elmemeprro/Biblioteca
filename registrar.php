@@ -3,6 +3,9 @@ include "conexion.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
+    $dpi = $_POST['dpi'];
+    $telefono = $_POST['telefono'];
+    $correo = $_POST['correo'];
     $usuario = $_POST['usuario'];
     $contraseña = md5($_POST['contraseña']);
 
@@ -14,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Location:registrousuario.php?error=Esa Cuenta ya Existente');
     } else {
       
-        $sql = "INSERT INTO registrar (nombre, apellido, usuario,contraseña) VALUES ('$nombre', '$apellido','$usuario', '$contraseña')";
+        $sql = "INSERT INTO registrar (nombre, apellido, dpi, telefono, correo, usuario, contraseña) VALUES ('$nombre', '$apellido','$dpi','$telefono','$correo','$usuario', '$contraseña')";
         if ($conn->query($sql) === TRUE) {
             header('Location:index.php');
         } else {
