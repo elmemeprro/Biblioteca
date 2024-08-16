@@ -153,7 +153,7 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item active">Clientes</li>
+                                <li class="breadcrumb-item active">Libros</li>
                             </ol>
                             <form action="registro.php" method="post">
                             <button type="submit"  class="btn btn-block btn-primary btn-lg col-sm-3"> <i class="fas fa-sync-alt"></i> </button>
@@ -170,30 +170,26 @@
                 <!-- Default box -->
                 <center><div class="card col-sm-7">
                 <div class="mb-3">
-                <form action="registrar_alumnos.php" method="post">
-            <label  class="form-label">NOMBRE</label>
-            <input type="text" class="form-control" name="nombre" placeholder="ingrese el nombre del cliente">
+                <form action="registrar_clientess.php" method="post">
+            <label  class="form-label">TITULO</label>
+            <input type="text" class="form-control" name="titulo" placeholder="ingrese el titulo del libro">
           </div>
 
           <div class="mb-3">
-            <label  class="form-label">APELLIDO</label>
-            <input type="text" class="form-control" name="apellido" placeholder="ingrese el apellido del cliente">
+            <label  class="form-label">AUTOR</label>
+            <input type="text" class="form-control" name="autor" placeholder="ingrese el autor del libro">
           </div>
 
           <div class="mb-3">
-            <label  class="form-label">DPI</label>
-            <input type="number" class="form-control" name="dpi" placeholder="ingrese su DPI">
+            <label  class="form-label">EDITOR</label>
+            <input type="number" class="form-control" name="editor" placeholder="ingrese el editor del libro">
           </div>
 
           <div class="mb-3">
-            <label  class="form-label">NUMERO DE TELEFONO</label>
-            <input type="number" class="form-control" name="telefono" placeholder="ingrese su numero de telefono">
+            <label  class="form-label">AÑO DE LANZAMIENTO</label>
+            <input type="number" class="form-control" name="año" placeholder="ingrese el año de lanzamiento del libro">
           </div>
 
-          <div class="mb-3">
-            <label  class="form-label">CORREO</label>
-            <input type="text" class="form-control" name="correo" placeholder="ingrese su correo">
-          </div>
 
           <button type="submit" class="btn btn-outline-info">Subir</button>
           <button type="button" class="btn btn-outline-danger"><a href="interfaz.php">Listar</a></button>

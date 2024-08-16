@@ -100,7 +100,7 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                            <li class="nav-item">
+                                <li class="nav-item">
                                     <a href="interfaz.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Tabla de Clientes</p>
@@ -153,10 +153,9 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item active">Estudiantes</li>
-                                
+                                <li class="breadcrumb-item active">Clientes</li>
                             </ol>
-                            <form action="interfaz.php" method="post">
+                            <form action="registro.php" method="post">
                             <button type="submit"  class="btn btn-block btn-primary btn-lg col-sm-3"> <i class="fas fa-sync-alt"></i> </button>
                             </form>
                             
@@ -169,54 +168,37 @@
             <section class="content">
             
                 <!-- Default box -->
-                <div class="card col-sm-25">
-                    <center><button type="button" class="btn btn-outline-danger card col-sm-.5"><a href="registro.php">Registro</a></button>
+                <center><div class="card col-sm-7">
+                <div class="mb-3">
+                <form action="registrar_clientess.php" method="post">
+            <label  class="form-label">NOMBRE</label>
+            <input type="text" class="form-control" name="nombre" placeholder="ingrese el nombre del cliente">
+          </div>
+
+          <div class="mb-3">
+            <label  class="form-label">APELLIDO</label>
+            <input type="text" class="form-control" name="apellido" placeholder="ingrese el apellido del cliente">
+          </div>
+
+          <div class="mb-3">
+            <label  class="form-label">DPI</label>
+            <input type="number" class="form-control" name="dpi" placeholder="ingrese su DPI">
+          </div>
+
+          <div class="mb-3">
+            <label  class="form-label">NUMERO DE TELEFONO</label>
+            <input type="number" class="form-control" name="telefono" placeholder="ingrese su numero de telefono">
+          </div>
+
+          <div class="mb-3">
+            <label  class="form-label">CORREO</label>
+            <input type="text" class="form-control" name="correo" placeholder="ingrese su correo">
+          </div>
+
+          <button type="submit" class="btn btn-outline-info">Subir</button>
+          <button type="button" class="btn btn-outline-danger"><a href="interfaz.php">Listar</a></button>
  </center>
-            <center><table class="table table-striped">
- <thead>
-    <center><tr>
-     <th scope="col">ID</th>
-     <th scope="col">Codigo Estudiante</th>
-     <th scope="col">Codigo Curso</th>
-     <th scope="col">Unidad 1</th>
-     <th scope="col">Unidad 2</th>
-     <th scope="col">Unidad 3</th>
-     <th scope="col">Unidad 4</th>
-     <th scope="col">Total</th>
-   </tr></center>
-   
- </thead>
- <tbody>
-
-
- <?php
-include "conexion.php";
-$sql = $conn ->query("SELECT * FROM notas");
-while($dat = $sql ->fetch_object()){
-
-?>    <tr>
-     <th scope="row"><?php echo $dat->id; ?> </th>
-     <td><?php echo $dat->fk_id_alumno; ?></td>
-     <td><?php echo $dat->fk_id_curso; ?></td>
-     <td><?php echo $dat->U1; ?></td>
-     <td><?php echo $dat->U2; ?></td>
-     <td><?php echo $dat->U3; ?></td>
-     <td><?php echo $dat->U4; ?></td>
-     <td><?php echo $dat->total; ?></td>
-     <td>
-   
-     <a href="gestiondenotas.php?id=<?php echo $dat -> id; ?>" class="btn btn-small btn-primary"><i class="fas fa-three"></i></a>
-  
-     
-    </td>
-   </tr>
-<?php
-}
-?>
- </tbody>
-</table>    
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
- </center>    
+                
  
                     <!-- /.card-footer-->
                 </div>

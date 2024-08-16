@@ -1,6 +1,6 @@
 <?php 
 $sn = "localhost";
-$db ="viaje";
+$db ="biblio";
 $user ="root";
 $pass = "";
 

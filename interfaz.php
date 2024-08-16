@@ -170,18 +170,17 @@
             
                 <!-- Default box -->
                 <div class="card col-sm-25">
-                    <center><button type="button" class="btn btn-outline-danger card col-sm-.5"><a href="registro.php">Registro</a></button>
+                    <center><button type="button" class="btn btn-outline-danger card col-sm-.5"><a href="registro_cliente.php">Registro</a></button>
  </center>
             <center><table class="table table-striped">
  <thead>
     <center><tr>
-     <th scope="col">Codigo Viajero</th>
+     <th scope="col">Codigo del Cliente</th>
      <th scope="col">Nombre</th>
      <th scope="col">Apellido</th>
      <th scope="col">DPI</th>
      <th scope="col">Telefono</th>
      <th scope="col">Correo</th>
-     <th scope="col">Cantidad de viajes</th>
    </tr></center>
    
  </thead>
@@ -190,7 +189,7 @@
 
  <?php
 include "conexion.php";
-$sql = $conn ->query("SELECT * FROM viajero");
+$sql = $conn ->query("SELECT * FROM clientes");
 while($dat = $sql ->fetch_object()){
 
 ?>    <tr>
@@ -200,15 +199,12 @@ while($dat = $sql ->fetch_object()){
      <td><?php echo $dat->dpi; ?></td>
      <td><?php echo $dat->telefono; ?></td>
      <td><?php echo $dat->correo; ?></td>
-     <td><?php echo $dat->viajes_realizados; ?></td>
      <td>
-     <a href="registro_viaje.php?id=<?php echo $dat -> id; ?>" class="btn btn-small btn-warning"><i class="fas fa-r"></i></a>
-     
-     <a href="editar.php?id=<?php echo $dat -> id; ?>" class="btn btn-small btn-warning"><i class="fas fa-edit"></i></a>
 
-     <a href="eliminar_alumnos.php?id=<?php echo $dat -> id; ?>" class="btn btn-small btn-danger"><i class="fas fa-trash-alt"></i></a>
-   
-     <a href="ver.php?id=<?php echo $dat -> id; ?>" class="btn btn-small btn-primary"><i class="fas fa-eye"></i></a>
+     <a href="editar_clientes.php?id=<?php echo $dat -> id; ?>" class="btn btn-small btn-warning"><i class="fas fa-edit"></i></a>
+
+     <a href="eliminar_clientes.php?id=<?php echo $dat -> id; ?>" class="btn btn-small btn-danger"><i class="fas fa-trash-alt"></i></a>
+
    </td>
    </tr>
 <?php

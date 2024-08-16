@@ -6,6 +6,6 @@ $apellido = $_POST['apellido'];
 $dpi = $_POST['dpi'];
 $telefono = $_POST['telefono'];
 $correo = $_POST['correo'];
-$sql = $conn -> query("DELETE FROM viajero WHERE id= '$id' ");
+$sql = $conn -> query("DELETE FROM clientes WHERE id= '$id' ");
 header('Location:interfaz.php');
 ?>

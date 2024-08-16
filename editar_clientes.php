@@ -171,43 +171,45 @@
                 <?php
 include "conexion.php";
 $id = $_GET['id'];
-$sql = $conn->query("SELECT * FROM viajero WHERE id = '$id'");
+$sql = $conn->query("SELECT * FROM clientes WHERE id = '$id'");
 while($dat = $sql->fetch_object()){
 
 ?>
                 <center><div class="card col-sm-7">
                 <div class="mb-3">
                     
-                <form action="registro_viajess.php?id=<?php echo $dat -> id; ?>" method="post">
+                <form action="editar_clientesss.php?id=<?php echo $dat -> id; ?>" method="post">
 
 
-            <label  class="form-label">No. de usuario</label>
+            <label  class="form-label">CODIGO DEL CLIENTE</label>
             <input type="text" class="form-control" name="id" value="<?php echo $dat -> id; ?>" disabled>
           
 
 
             <label  class="form-label">NOMBRE</label>
-            <input type="text" class="form-control" name="nombre" value="<?php echo $dat -> nombre; ?>" placeholder="ingrese el nombre">
+            <input type="text" class="form-control" name="nombre" value="<?php echo $dat -> nombre; ?>" placeholder="ingrese el nombre del estudiante">
           
 
           
             <label  class="form-label">APELLIDO</label>
-            <input type="text" class="form-control" name="apellido" value="<?php echo $dat -> apellido; ?>"placeholder="ingrese el apellido">
+            <input type="text" class="form-control" name="apellido" value="<?php echo $dat -> apellido; ?>"placeholder="ingrese el apellido del estudiante">
+          
+
           
             <label  class="form-label">DPI</label>
-            <input type="text" class="form-control" name="dpi" value="<?php echo $dat -> dpi; ?>"placeholder="ingrese el apellido">
+            <input type="number" class="form-control" name="dpi" value="<?php echo $dat -> dpi; ?>"placeholder="ingrese su DPI">
+         
+
+            <label  class="form-label">TELEFONO</label>
+            <input type="number" class="form-control" name="telefono" value="<?php echo $dat -> telefono; ?>" placeholder="ingrese el numero de telefono del estudiante">
           
-            <label  class="form-label">VIAJES REALIZADOS ANTERIORMENTE</label>
-            <input type="text" class="form-control" name="viajes_realizados" value="<?php echo $dat -> viajes_realizados; ?>"placeholder="ingrese el apellido">
+
           
-
-            <div class="mb-3">
-            <label  class="form-label">DESTINO</label>
-            <input type="text" class="form-control" name="destino" placeholder="ingrese su destino">
-          </div>
+            <label  class="form-label">CORREO</label>
+            <input type="email" class="form-control" name="correo" value="<?php echo $dat -> correo; ?>"placeholder="ingrese el correo del estudiante">
 
 
-          <button type="submit" class="btn btn-outline-info">Registrar Viaje</button>
+          <button type="submit" class="btn btn-outline-info">Editar</button>
           <button type="button" class="btn btn-outline-danger"><a href="interfaz.php">Listar</a></button>
           
  </center>
