@@ -196,22 +196,22 @@
                 <div class="mb-3">
                 <form action="registro_prestamoss.php" method="post">
             <label  class="form-label">NOMBRE DEL CLIENTE</label>
-            <input type="text" class="form-control" name="nombre" placeholder="ingrese el nombre del cliente">
+            <input type="text" class="form-control" name="fk_cliente" placeholder="ingrese el nombre del cliente">
           </div>
 
           <div class="mb-3">
             <label  class="form-label">TITULO DEL LIBRO</label>
-            <input type="text" class="form-control" name="titulo" placeholder="ingrese el titulo del libro">
+            <input type="text" class="form-control" name="fk_titulo" placeholder="ingrese el titulo del libro">
           </div>
 
           <div class="mb-3">
             <label  class="form-label">FECHA DE PRESTAMO</label>
-            <input type="date" class="form-control" name="fechap" placeholder="ingrese la fecha del prestamo">
+            <input type="date" class="form-control" name="fecha_de_pres" placeholder="ingrese la fecha del prestamo">
           </div>
 
           <div class="mb-3">
             <label  class="form-label">FECHA DE DEVOLUCION</label>
-            <input type="date" class="form-control" name="fechad" placeholder="ingrese la fecha de la devolucion">
+            <input type="date" class="form-control" name="fecha_de_dev" placeholder="ingrese la fecha de la devolucion">
           </div>
 
           <button type="submit" class="btn btn-outline-info">Subir</button>
